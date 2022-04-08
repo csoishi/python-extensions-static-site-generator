@@ -14,7 +14,7 @@ def written():
     global total_written
     total_written = total_written + 1
 
-@hooks.event("stats")
+@hooks.register("stats")
 def stats():
     final_time = time.time() - start_time
     average = final_time / total_written if total_written else 0
